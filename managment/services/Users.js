@@ -65,8 +65,8 @@ angular.module('AutoParkApp').factory('parkAPI', function ($http) {
 
     // PUT /spots/:id
 
-    var updateSpot = function(spotID) {
-      return $http.put("http://autopark.azurewebsites.net/spots/", spotID).
+    var updateSpot = function(spotID, spotData) {
+      return $http.put("http://autopark.azurewebsites.net/spots/" + spotID, spotData).
           success(function(data, status, headers, config) {
               return {status: status, data: data};
           }).

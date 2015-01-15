@@ -1,0 +1,17 @@
+<table class="table table-responsive text-center">
+    <tr>
+        <th class="text-center">Plate Number</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Email</th>
+    </tr>
+
+    <tr ng-repeat="user in allUsers">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+    </tr>
+
+
+    <!--<li ng-repeat="user in allUsers">{{ user }}</li>-->
+
+</table>

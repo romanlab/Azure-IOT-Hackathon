@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <form name="takespot" class="form" ng-submit="submit(takespot)">
+
+            <!--to string New Date-->
+            <!--Parking-->
+            <div class="form-group" ng-class="{ 'has-success': takespot.parkid.$valid,
+                                            'has-error': takespot.parkid.$invalid}">
+                <label>Enter your parking ID</label>
+                <input type="text" name="parkid" class="form-control" ng-model="user.parkid" required placeholder="Please enter your park ID" />
+                <p class="help-block" ng-show="takespot.parkid.$error.required && submitted">
+                    Park ID is required
+                </p>
+            </div>
+
+            <!--Parking-->
+            <div class="form-group" ng-class="{ 'has-success': takespot.ownerid.$valid,
+                                            'has-error': takespot.ownerid.$invalid}">
+                <label>Enter your license plate ID</label>
+                <input type="text" name="ownerid" class="form-control" ng-model="user.ownerid" required placeholder="Enter your license plate" />
+                <p class="help-block" ng-show="takespot.ownerid.$error.required && submitted">
+                    License plate is required
+                </p>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-success': takespot.timeOut.$valid,
+                                            'has-error': takespot.timeOut.$invalid}">
+                <label>Enter your leaving time</label>
+                <input type="time" name="timeOut" class="form-control" ng-model="user.timeOut" required placeholder="Please enter your leaving time "/>
+                <p class="help-block" ng-show="takespot.timeOut.$error.required && submitted">
+                    Leaving time is required
+                </p>
+            </div>
+            <!--end of timeOut -->
+            <h2>{{ error }}</h2> <br/>
+            <button ng-disabled="takespot.$invalid" class="btn btn-lg btn-primary btn-block" type="submit">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>

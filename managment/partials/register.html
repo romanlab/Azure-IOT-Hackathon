@@ -1,5 +1,4 @@
 <div class="container">
-    {{ data }}
     <div class="row">
         <div class="col-sm-12">
             <h1>Register User</h1>
@@ -9,7 +8,7 @@
             <!--ID-->
             <div class="form-group" ng-class="{ 'has-success': register.id.$valid,
                                             'has-error': register.id.$invalid}">
-                <label>ID-Card:</label>
+                <label>Car ID:</label>
                 <input type="text" name="id" class="form-control" ng-model="user.id" required placeholder="Please Enter your full name" />
                 <p class="help-block" ng-show="register.id.$error.required && submitted">
                     Id card is required
@@ -58,11 +57,13 @@
                 </p>
             </div>
             <!--end of phone -->
-
+            <h2>{{ error }}</h2> <br/>
             <button ng-disabled="register.$invalid" class="btn btn-lg btn-primary btn-block" type="submit">
                 Submit
             </button>
         </form>
+
+
     </div>
 </div>
 
