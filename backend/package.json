@@ -8,7 +8,7 @@
     "bluebird": "^2.3.11",
     "body-parser": "^1.9.2",
     "documentdb": "^0.9.2",
-    "doqmentdb": "^0.2.1",
+    "doqmentdb": "^0.2.2",
     "express": "^4.10.2"
   }
 }

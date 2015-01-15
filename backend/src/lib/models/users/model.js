@@ -46,7 +46,6 @@ module.exports = {
    */
   phone: {
     type: Number,
-    'default': '',
     expose: true
   }
 };
