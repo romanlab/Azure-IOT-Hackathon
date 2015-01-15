@@ -3,16 +3,57 @@
 <head>
     <meta charset="utf-8">
     <title>Auto Park</title>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./src/app.css" rel="stylesheet" type="text/css">
 </head>
-<body ng-app="autopark"
-      ng-controller="MainCtrl">
-<input ng-model="name" type="text">
-{{ name }}
+<body ng-app="autopark" ng-controller="MainCtrl" ng-hide="blank">
+<!--container-->
+<div class="jumbotron">
+    <div class="container">
+        <h1>AutoPark</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="col-xs-4 col-md-4">
+        <div class="car bg-info" ng-repeat="spot in rowA">
+            <div class="in" ng-show="spot.assigned">
+                <p>Parking out: {{ spot.time }}</p>
+                <p>Name: {{ spot.owner.name }}</p>
+                <p ng-show="spot.owner.phone">Phone: {{ spot.owner.phone }}</p>
+            </div>
+            <p>{{ spot.id }}</p>
+        </div>
+    </div>
+
+    <div class="col-xs-4 col-md-4 fake">
+        <div class="car bg-info">
+        </div>
+
+        <div class="fake1">
+        </div>
+    </div>
+
+    <div class="col-xs-4 col-md-4">
+        <div class="car bg-info" ng-repeat="spot in rowB">
+            <div class="in" ng-show="spot.assigned">
+                <p>Parking out: {{ spot.time }}</p>
+                <p>Name: {{ spot.owner.name }}</p>
+                <p ng-show="spot.owner.phone">Phone: {{ spot.owner.phone }}</p>
+            </div>
+            <p>{{ spot.id }}</p>
+        </div>
+    </div>
+</div>
 
 <!-- deps -->
 <script src="./bower_components/jquery/dist/jquery.js"></script>
 <script src="./bower_components/jquery/dist/jquery.js"></script>
 <script src="./bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="./bower_components/angular/angular.js"></script>
 <script src="./bower_components/angular-dragdrop/src/angular-dragdrop.js"></script>
+<script src="./bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+
+<!-- app -->
+<script src="./src/app.js"></script>
 </body>
 </html>

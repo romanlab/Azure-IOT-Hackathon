@@ -41,9 +41,9 @@ module.exports = {
    * @field number
    */
   owner: {
-    type: Number,
-    'default': 9999999,
-    regex: /^[\d+]{7}$/,
+    type: String,
+    'default': "9999999",
+    regex: /^[\d*]{7}$/,
     error: '`owner` must be type string, contains only 7 digits and least 7 chars'
   },
 

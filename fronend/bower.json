@@ -5,6 +5,8 @@
     "**/*.txt"
   ],
   "dependencies": {
-    "angular-dragdrop": "~1.0.11"
+    "angular-dragdrop": "~1.0.11",
+    "angular-bootstrap": "~0.12.0",
+    "bootstrap": "~3.3.1"
   }
 }

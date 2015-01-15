@@ -112,12 +112,12 @@ function removeAction(req, res) {
  * @method DELETE
  */
 function pingAction(req, res) {
-  var id = req.params.id || '';
+  var id = String(req.params.id) || '';
   var response = resFactory(res);
 
   // sign out action
   function signOut(spot, user) {
-    var refresh = { assigned: false, owner: 9999999, parkingOut: new Date(0).toString() };
+    var refresh = { assigned: false, owner: "9999999", parkingOut: new Date(0).toString() };
     return Promise.props({
       0: spots.findOneAndModify({ id: spot.id }, refresh),
       1: users.findOneAndModify({ id: user.id }, { troublemaker: false })
