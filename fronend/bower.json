@@ -1,0 +1,10 @@
+{
+  "name": "autopark",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "angular-dragdrop": "~1.0.11"
+  }
+}
