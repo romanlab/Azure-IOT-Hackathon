@@ -12,8 +12,8 @@ module.exports = {
   id: {
     type: String,
     'default': '',
-    regex: /^[\d+]$/,
-    error: '`id` must be type string, contains only 7 digits and least 7 chars',
+    regex: /^[\d*]{1,}$/,
+    error: '`id` must be type string',
     expose: true
   },
 
