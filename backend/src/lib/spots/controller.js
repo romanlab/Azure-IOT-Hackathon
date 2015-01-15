@@ -52,7 +52,8 @@ function getAllAction(req, res) {
   }).then(function(data) {
     return (data.spots || []).map(function(spot) {
       var id = spot.owner;
-      return _.extend(spot, { owner: _.find(data.users, 'id ==' + id) });
+      spot.owner = _.find(data.users, 'id ==' + id) || id;
+      return spot;
     });
   })
     .then(response)
