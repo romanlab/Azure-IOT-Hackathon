@@ -16,3 +16,6 @@ app.route('/spots/:id')
   .get(controller.get)
   .put(controller.update)
   .delete(controller.remove);
+
+app.route('/events/:id')
+  .put(controller.ping);

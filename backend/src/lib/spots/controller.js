@@ -91,12 +91,18 @@ function removeAction(req, res) {
 }
 
 
+function pingAction(req, res) {
+  var id = req.params.id || '';
+  // TODO: ...
+}
+
 /**
  * @expose
  */
 module.exports = {
   get: getAction,
   add: addAction,
+  ping: pingAction,
   remove: removeAction,
   update: updateAction,
   getAll: getAllAction
