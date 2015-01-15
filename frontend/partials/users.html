@@ -1,0 +1,76 @@
+<div class="container">
+    {{ data }}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Register User</h1>
+        </div>
+        <form name="register" class="form" ng-submit="submit(register)" novalidate>
+
+            <!--ID-->
+            <div class="form-group" ng-class="{ 'has-success': register.id.$valid,
+                                            'has-error': register.id.$invalid}">
+                <label>ID-Card:</label>
+                <input type="text" name="id" class="form-control" ng-model="user.id" required placeholder="Please Enter your full name" />
+                <p class="help-block" ng-show="register.id.$error.required && submitted">
+                    Id card is required
+                </p>
+            </div><!--end of ID-->
+
+            <!--full name-->
+            <div class="form-group" ng-class="{ 'has-success': register.name.$valid,
+                                            'has-error': register.name.$invalid}">
+                <label>Full Name</label>
+                <input type="text" name="name" class="form-control" ng-model="user.name" required placeholder="Please Enter your full name" />
+                <p class="help-block" ng-show="register.name.$error.required && submitted">
+                    A name is required
+                </p>
+            </div><!--end of full name-->
+
+            <!-- email -->
+            <div class="form-group" ng-class="{ 'has-success': register.email.$valid,
+                                            'has-error': register.email.$invalid}">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" ng-model="user.email" required placeholder="Please Enter your email address, it's important for confirmation"/>
+
+                <p class="help-block" ng-show="register.email.$error.email && submitted">
+                    Doesn't look like a valid email.
+                </p>
+
+                <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">
+                    Please enter a proper email.
+                </p>
+
+                <p class="help-block" ng-show="register.email.$error.required && submitted">
+                    What's your email address?
+            </div>
+            <!-- end of email-->
+
+            <!--  phone -->
+            <div class="form-group" ng-class="{ 'has-success': register.phone.$valid,
+                                            'has-error': register.phone.$invalid}">
+                <label>Phone</label>
+                <input type="tel" name="phone" class="form-control" ng-model="user.phone" required placeholder="Please Enter your phone" />
+                <p class="help-block" ng-show="register.phone.$error.required && submitted">
+                    A phone is reuired
+                </p>
+                <p class="help-block" ng-show="register.phone.$dirty && register.phone.$invalid">
+                    Please enter a proper phone.
+                </p>
+            </div>
+            <!--end of phone -->
+
+            <button ng-disabled="register.$invalid" class="btn btn-lg btn-primary btn-block" type="submit">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
+
+
+<!--carOwner{-->
+<!--"id": '1234567',-->
+<!--"name" : 'teymani',-->
+<!--"email" : 'teymani@ironsrc.com',-->
+<!--"phone" : '054-1234567'-->
+<!--"currentSpot" : parkingSpot_id-->
+<!--}-->
