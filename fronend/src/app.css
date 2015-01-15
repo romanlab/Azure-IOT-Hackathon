@@ -110,3 +110,25 @@ iframe {
     font-size: 16px;
     text-align: center;
 }
+
+.in p {
+    margin: 0;
+}
+
+.modal {
+    text-align: center;
+    padding-top: 90px;
+    position: absolute;
+    left: 26%;
+    top: 20%;
+    background: rgb(255, 184, 0);
+    border: 14px solid rgb(0, 78, 245);
+    z-index: 9999999;
+    display: block;
+    width: 50%;
+    height: 50%;
+    box-shadow: 1px 10px 100px rgba(0,0,0,0.8);
+}
+.modal label {
+    color:black;
+}

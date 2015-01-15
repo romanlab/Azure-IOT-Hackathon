@@ -7,10 +7,25 @@
     <link href="./src/app.css" rel="stylesheet" type="text/css">
 </head>
 <body ng-app="autopark" ng-controller="MainCtrl" ng-hide="blank">
+<div class="modal" ng-show="modal">
+    <p>Spot Number:</p>
+    <input id="name" ng-model="carId"/>
+    <p>Parking out:</p>
+    <input id="time" ng-model="time"/>
+    <br/><br/><br/>
+    <p>
+        <button ng-click="updateForm()">Update</button>
+    </p>
+</div>
 <!--container-->
 <div class="jumbotron">
     <div class="container">
-        <h1>AutoPark</h1>
+        <h1>Help us to add this users:</h1>
+    </div>
+    <div class="users btn-group">
+        <div ng-repeat="user in troubleUsers" style="float: left; margin: 10px;">
+            <div class="btn btn-primary" ng-click="updateUser(user.id)">{{ user.name }}</div>
+        </div>
     </div>
 </div>
 <div class="container">
@@ -19,6 +34,7 @@
             <div class="in" ng-show="spot.assigned">
                 <p>Parking out: {{ spot.time }}</p>
                 <p>Name: {{ spot.owner.name }}</p>
+                <p>Car ID: {{ spot.owner.id }}</p>
                 <p ng-show="spot.owner.phone">Phone: {{ spot.owner.phone }}</p>
             </div>
             <p>{{ spot.id }}</p>
@@ -38,6 +54,7 @@
             <div class="in" ng-show="spot.assigned">
                 <p>Parking out: {{ spot.time }}</p>
                 <p>Name: {{ spot.owner.name }}</p>
+                <p>Car ID: {{ spot.owner.id }}</p>
                 <p ng-show="spot.owner.phone">Phone: {{ spot.owner.phone }}</p>
             </div>
             <p>{{ spot.id }}</p>
