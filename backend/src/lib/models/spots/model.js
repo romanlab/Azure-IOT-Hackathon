@@ -32,7 +32,7 @@ module.exports = {
    * @field email
    * @regex email, min-length = 10
    */
-  assinged: {
+  assigned: {
     type: Boolean,
     'default': false
   },

@@ -33,10 +33,7 @@ module.exports = {
    * @regex email, min-length = 10
    */
   email: {
-    type: String,
-    'default': '',
-    regex: /^[a-zA-Z0-9@:%_\+.~#?&//=|/d]{10,}$/,
-    error: '`email` must be type string, valid email address, and least 10 chars'
+    type: String
   },
 
   /**
@@ -44,5 +41,13 @@ module.exports = {
    */
   phone: {
     type: Number
+  },
+
+  /**
+   * @field number
+   */
+  troublemaker: {
+    type: Boolean,
+    'default': false
   }
 };
