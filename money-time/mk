@@ -1,0 +1,2 @@
+#!/bin/sh
+g++ -o test test.cpp `pkg-config --cflags --libs opencv cvblob`
