@@ -12,7 +12,7 @@ module.exports = {
   id: {
     type: String,
     'default': '',
-    regex: /^[\d+]{7}$/,
+    regex: /^[\d+]$/,
     error: '`id` must be type string, contains only 7 digits and least 7 chars',
     expose: true
   },
@@ -21,28 +21,37 @@ module.exports = {
    * @field name
    * @regex chars, nums, min-length = 3
    */
-  name: {
+  location: {
     type: String,
     'default': '',
-    regex: /^[a-zA-Z0-9|/d]{3,}$/,
-    error: '`name` must be type string, and least 3 chars'
+    regex: /^[a-zA-Z0-9|/d]{2,}$/,
+    error: '`location` must be type string, and least 3 chars'
   },
 
   /**
    * @field email
    * @regex email, min-length = 10
    */
-  email: {
-    type: String,
-    'default': '',
-    regex: /^[a-zA-Z0-9@:%_\+.~#?&//=|/d]{10,}$/,
-    error: '`email` must be type string, valid email address, and least 10 chars'
+  assinged: {
+    type: Boolean,
+    'default': false
   },
 
   /**
    * @field number
    */
-  phone: {
-    type: Number
+  owner: {
+    type: Number,
+    'default': 9999999,
+    regex: /^[\d+]{7}$/,
+    error: '`owner` must be type string, contains only 7 digits and least 7 chars'
+  },
+
+  /**
+   * @field parkingOut
+   */
+  parkingOut: {
+    type: String,
+    'default': new Date(0).toString()
   }
 };

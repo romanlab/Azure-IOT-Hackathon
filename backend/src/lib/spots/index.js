@@ -9,7 +9,7 @@ var express    = require('express')
 app.use(bodyParser.json());
 
 // Routes
-app.route('/spots/')
+app.route('/spots')
   .get(controller.getAll)
   .post(controller.add);
 app.route('/spots/:id')
