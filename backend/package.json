@@ -1,0 +1,16 @@
+{
+  "name": "autopark",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "agile": "0.0.2",
+    "azure-storage": "^0.4.0",
+    "bluebird": "^2.3.11",
+    "body-parser": "^1.9.2",
+    "documentdb": "^0.9.2",
+    "doqmentdb": "^0.2.2",
+    "express": "^4.10.2"
+  }
+}
