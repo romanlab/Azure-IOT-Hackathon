@@ -9,4 +9,4 @@ app.use(users);
 app.use(spots);
 
 // Run Express
-app.listen(1337);
+app.listen(process.env.port || 1337);

@@ -1,5 +1,6 @@
 'use strict';
 var spots = require('../models/spots')
+  , users = require('')
   , _     = require('agile');
 
 
@@ -93,7 +94,7 @@ function removeAction(req, res) {
 
 function pingAction(req, res) {
   var id = req.params.id || '';
-  // TODO: ...
+//  spots.findById()
 }
 
 /**
