@@ -89,12 +89,17 @@ function removeAction(req, res) {
     .catch(response);
 }
 
+function helloAction(req, res) {
+  res.status(200).send('Hello World!');
+}
+
 /**
  * @expose
  */
 module.exports = {
   get: getAction,
   add: addAction,
+  hello: helloAction,
   remove: removeAction,
   update: updateAction,
   getAll: getAllAction
