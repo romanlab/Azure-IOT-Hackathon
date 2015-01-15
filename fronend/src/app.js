@@ -1,4 +1,4 @@
-var baseUrl = 'http://localhost:1337';
+var baseUrl = 'http://autopark.azurewebsites.net';
 
 angular.module('autopark', ['ui.bootstrap'])
   .controller('MainCtrl', function($scope, $http) {
